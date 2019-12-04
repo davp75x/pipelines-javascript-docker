@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: davpxpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: davpxpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: davpxpipelinesjavascriptdocker 
+          image: registredocker.azurecr.io/davpxpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
